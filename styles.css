@@ -26,6 +26,13 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: 'Acumin Condensed';
+    src: url('fonts/Acumin-CondPro.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     padding: 65px;
     font-size: 19px;
@@ -91,6 +98,7 @@ a:hover {
 .footer-container {
     text-align: center;
     padding-bottom: 2.5rem;
+    margin-top: 100px;
 }
 
 .footer {
@@ -110,14 +118,23 @@ a:hover {
 
 /*** Gallery ***/
 .gallery {
+    justify-content: center;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 15px;
+    grid-template-columns: repeat(3, 450px);
+    gap: 2rem;
 }
 
 .gallery__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+
+.img-caption {
+    font-family: 'Acumin Condensed', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-top: 0px;
+    line-height: 20px;
+    text-align: center;
 }
