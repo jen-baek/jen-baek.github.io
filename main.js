@@ -4,8 +4,8 @@ class navbar extends HTMLElement {
         <header>
             <nav class='navbar'>
                 <ul>
-                    <li><a href="../pages/index.html">HOME</a></li>
-                    <li><a href="../pages/about.html">CODE</a></li>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="../pages/code.html">CODE</a></li>
                     <li><a href="../pages/artwork.html">ARTWORK</a></li>
                     <li><a href="../pages/resume.html">RESUME</a></li>
                     <li><a href="../pages/contact.html">CONTACT</a></li>
