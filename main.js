@@ -35,7 +35,10 @@ class footer extends HTMLElement {
                         <i style = "color:white;" class='bi-envelope'></i>
                     </a>
                 </div>
-                <p class="footer-text">Made with GitHub Pages</p>
+                <p class="footer-text">
+                © 2024 Jen Baek<br>
+                Made with GitHub Pages
+                </p>
             </div>
         </div>
         `
