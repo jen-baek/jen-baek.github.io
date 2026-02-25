@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project One — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Your Name</div>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li>
+        <a href="projects.html">Projects</a>
+        <ul class="nav-subtabs">
+          <li><a href="project-1.html" class="active">Project One</a></li>
+          <li><a href="project-2.html">Project Two</a></li>
+        </ul>
+      </li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-detail">
+    <a href="projects.html" class="back-link">← All Projects</a>
+
+    <h1>Project One</h1>
+    <p style="font-size: 13px; color: var(--gray-text); margin-bottom: 32px; font-weight: 600; letter-spacing: 0.05em;">2024 &nbsp;·&nbsp; Research</p>
+
+    <div class="divider-light"></div>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <p>
+      Duis aute irure dolor in reprehenderit in <span class="highlight-yellow">voluptate velit esse</span> cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    </p>
+
+    <div class="divider-light"></div>
+
+    <h2>Methods</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia <span class="highlight-cyan">consequuntur magni dolores</span> eos qui ratione voluptatem sequi nesciunt.
+    </p>
+
+    <div class="divider-light"></div>
+
+    <h2>Outcomes</h2>
+    <p>
+      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+    </p>
+
+  </main>
+
+  <script>
+    const projectsLink = document.querySelector(".nav-links a[href*='projects']");
+    const subtabs = document.querySelector(".nav-subtabs");
+    const isProjectPage = document.querySelector(".nav-subtabs a.active") !== null
+      || window.location.pathname.includes("projects");
+
+    const icon = document.createElement("span");
+    icon.className = "nav-toggle-icon" + (isProjectPage ? "" : " rotated");
+    icon.textContent = "▾";
+    projectsLink.classList.add("nav-toggle");
+    projectsLink.appendChild(icon);
+
+    if (!isProjectPage) subtabs.classList.add("collapsed");
+
+    projectsLink.addEventListener("click", function(e) {
+      if (isProjectPage) {
+        e.preventDefault();
+      }
+      subtabs.classList.toggle("collapsed");
+      icon.classList.toggle("rotated");
+    });
+  </script>
+</body>
+</html>

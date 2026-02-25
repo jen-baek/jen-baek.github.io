@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Your Name</div>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li>
+        <a href="projects.html" class="active">Projects</a>
+        <ul class="nav-subtabs">
+          <li><a href="project-1.html">Project One</a></li>
+          <li><a href="project-2.html">Project Two</a></li>
+        </ul>
+      </li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Projects</h1>
+    <p>A selection of work I've done — research, side projects, and things I'm proud of.</p>
+
+    <div class="projects-grid">
+
+      <a href="project-1.html" class="project-card">
+        <h3>Project One</h3>
+        <p class="card-preview">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+        <span class="card-tag">Research</span>
+      </a>
+
+      <a href="project-2.html" class="project-card">
+        <h3>Project Two</h3>
+        <p class="card-preview">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+        <span class="card-tag">Data</span>
+      </a>
+
+    </div>
+  </main>
+
+  <script>
+    const projectsLink = document.querySelector(".nav-links a[href*='projects']");
+    const subtabs = document.querySelector(".nav-subtabs");
+    const isProjectPage = document.querySelector(".nav-subtabs a.active") !== null
+      || window.location.pathname.includes("projects");
+
+    const icon = document.createElement("span");
+    icon.className = "nav-toggle-icon" + (isProjectPage ? "" : " rotated");
+    icon.textContent = "▾";
+    projectsLink.classList.add("nav-toggle");
+    projectsLink.appendChild(icon);
+
+    if (!isProjectPage) subtabs.classList.add("collapsed");
+
+    projectsLink.addEventListener("click", function(e) {
+      if (isProjectPage) {
+        e.preventDefault();
+      }
+      subtabs.classList.toggle("collapsed");
+      icon.classList.toggle("rotated");
+    });
+  </script>
+</body>
+</html>

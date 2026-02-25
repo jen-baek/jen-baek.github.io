@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-name">Your Name</div>
+    <ul class="nav-links">
+      <li><a href="index.html">About</a></li>
+      <li>
+        <a href="projects.html">Projects</a>
+        <ul class="nav-subtabs">
+          <li><a href="project-1.html">Project One</a></li>
+          <li><a href="project-2.html">Project Two</a></li>
+        </ul>
+      </li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Contact</h1>
+
+    <div class="contact-block">
+      <p>
+        I'm always open to conversations about research, collaboration, or opportunities. The best way to reach me is by email — I try to respond within a few days.
+      </p>
+
+      <a href="mailto:your@email.com" class="contact-email-link">your@email.com</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <p style="font-size: 13px; color: var(--gray-text);">
+      You can also find me on
+      <a href="https://linkedin.com/in/yourprofile" style="font-weight: 700; border-bottom: 1px solid currentColor;">LinkedIn</a>
+      and
+      <a href="https://github.com/yourusername" style="font-weight: 700; border-bottom: 1px solid currentColor;">GitHub</a>.
+    </p>
+  </main>
+
+  <script>
+    const projectsLink = document.querySelector(".nav-links a[href*='projects']");
+    const subtabs = document.querySelector(".nav-subtabs");
+    const isProjectPage = document.querySelector(".nav-subtabs a.active") !== null
+      || window.location.pathname.includes("projects");
+
+    const icon = document.createElement("span");
+    icon.className = "nav-toggle-icon" + (isProjectPage ? "" : " rotated");
+    icon.textContent = "▾";
+    projectsLink.classList.add("nav-toggle");
+    projectsLink.appendChild(icon);
+
+    if (!isProjectPage) subtabs.classList.add("collapsed");
+
+    projectsLink.addEventListener("click", function(e) {
+      if (isProjectPage) {
+        e.preventDefault();
+      }
+      subtabs.classList.toggle("collapsed");
+      icon.classList.toggle("rotated");
+    });
+  </script>
+</body>
+</html>
