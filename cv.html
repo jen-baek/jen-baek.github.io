@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV — Your Name</title>
+  <title>CV — Jenny Baek</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
-    <div class="nav-name">Your Name</div>
+    <div class="nav-name">Jenny Baek</div>
     <ul class="nav-links">
       <li><a href="index.html">About</a></li>
       <li>
@@ -20,6 +20,7 @@
         </ul>
       </li>
       <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="misc.html">Misc</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -27,56 +28,128 @@
   <main>
     <h1>CV</h1>
 
-    <!-- Replace "your-cv.pdf" with the actual filename of your PDF -->
-    <a href="your-cv.pdf" download class="cv-download-btn">↓ Download PDF</a>
+    <a href="Jenny_Baek_Resume.pdf" download class="cv-download-btn">↓ Download PDF</a>
 
     <!-- EDUCATION -->
     <div class="cv-section">
-      <h2>Education</h2>
+      <h2><span class="highlight-cyan">Education</span></h2>
+
       <div class="cv-entry">
         <div class="cv-entry-header">
-          <h3>PhD in [Field]</h3>
-          <span class="cv-date">2022 — Present</span>
+          <h3>M.Eng in Artificial Intelligence and Decision Making</h3>
+          <span class="cv-date">2025 - 2026</span>
         </div>
-        <p class="cv-subtitle">[University Name], [City]</p>
+        <p class="cv-subtitle">Massachusetts Institute of Technology | Cambridge, MA</p>
         <ul>
-          <li>Dissertation: "[Working title of your dissertation]"</li>
+          <li>Thesis: "PaGeR: Vision-Based Point-and-Gesture Recognition for Mobile Industrial Robots"</li>
           <li>Advisor: Prof. [Name]</li>
         </ul>
       </div>
+
       <div class="cv-entry">
         <div class="cv-entry-header">
-          <h3>BS in [Field]</h3>
-          <span class="cv-date">2018 — 2022</span>
+          <h3>S.B. in Artificial Intelligence and Decision Making</h3>
+          <span class="cv-date">2021 - 2025</span>
         </div>
-        <p class="cv-subtitle">[University Name], [City]</p>
+        <p class="cv-subtitle">Massachusetts Institute of Technology | Cambridge, MA</p>
       </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Relevant coursework:</h3>
+        </div>
+        <ul>
+          <li><b>Computer Science:</b> Intro to Machine Learning, Deep Learning, Advances in Computer Vision, Grad Natural Language Processing, Robotic Manipulation, Intro to Algorithms, Fundamentals of Programming</li>
+          <li><b>Math:</b> Statistical Learning Theory and Applications, Intro to Statistical Data Analysis, Mathematics for Computer Science, Computability and Complexity Theory, Intro to Probability, Linear Algebra, Differential Equations, Multivariable Calculus</li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="divider"></div>
 
-    <!-- RESEARCH EXPERIENCE -->
+    <!-- SKILLS -->
     <div class="cv-section">
-      <h2>Research Experience</h2>
+      <h2><span class="highlight-cyan">Skills</span></h2>
+
       <div class="cv-entry">
         <div class="cv-entry-header">
-          <h3>Graduate Research Assistant</h3>
-          <span class="cv-date">2022 — Present</span>
+          <h3>Programming</h3>
         </div>
-        <p class="cv-subtitle">[Lab Name], [University]</p>
+        <p class="cv-subtitle">Python, R, SQL, [others]</p>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>AI/ML</h3>
+        </div>
+        <p class="cv-subtitle">[Tool 1], [Tool 2], [Tool 3]</p>
+      </div>
+
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- PROFESSIONAL & RESEARCH EXPERIENCE -->
+    <div class="cv-section">
+      <h2><span class="highlight-cyan">Professional & Research Experience</span></h2>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Machine Learning & Robotics Intern</h3>
+          <span class="cv-date">Jun 2025 - Aug 2025</span>
+        </div>
+        <p class="cv-subtitle">Bristol Robotics Laboratory, Dexterous Robotics Group | Bristol, UK</p>
         <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Developed [method/tool] for [application], resulting in [outcome].</li>
-          <li>Collaborated with [team/institution] on [project].</li>
+          <li>Built a pilot graph neural network (GNN) project to interpret data from a vision-based tactile sensor, enabling real-time, high-accuracy Braille recognition for robotic systems.</li>
+          <li>Developed a full perception pipeline, covering data preprocessing, model training, and performance evaluation for real-time deployment.</li>
+          <li>Coordinated with supervisors while independently managing milestones and producing structured technical documentation for future team members.</li>
         </ul>
       </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Research Intern - Machine Learning</h3>
+          <span class="cv-date">Jun 2024 - Feb 2025</span>
+        </div>
+        <p class="cv-subtitle">MIT Kavli Institute for Astrophysics and Space Research | Cambridge, MA</p>
+        <ul>
+          <li>Built a conditional stable diffusion model in PyTorch to remove scattered light from TESS satellite images, applying advanced computer vision and generative modeling techniques.</li>
+          <li>Scaled the model to handle multi-camera input and high-resolution images, improving robustness and versatility for large datasets.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Research Intern - Autonomous Systems</h3>
+          <span class="cv-date">Feb 2023 - Feb 2024</span>
+        </div>
+        <p class="cv-subtitle">Reliable Autonomous Systems Lab @ MIT | Cambridge, MA</p>
+        <ul>
+          <li>Developed formation control algorithms for multi-robot autonomous systems in a Python simulation and presented results in a lab-wide session.</li>
+          <li>Implemented and trained autonomous navigation models using Google JAX, enabling scalable simulation-based experimentation.</li>
+        </ul>
+      </div>
+
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <h3>Research Intern</h3>
+          <span class="cv-date">Feb 2022 - Dec 2022</span>
+        </div>
+        <p class="cv-subtitle">MIT Media Lab, Tangible Media Group | Cambridge, MA</p>
+        <ul>
+          <li>Improved accuracy of a 3D computational landscape simulation using C++ and openFrameworks for the SandScape exhibit at the MIT Museum.</li>
+          <li>Collaborated with mechanical and software engineers to modernize TRANSFORM motion design software, ensuring maintainability and compatibility with the latest openFrameworks version.</li>
+        </ul>
+      </div>
+
     </div>
 
     <div class="divider"></div>
 
     <!-- PUBLICATIONS -->
     <div class="cv-section">
-      <h2>Publications</h2>
+      <h2><span class="highlight-cyan">Publications</span></h2>
       <div class="cv-entry">
         <ul>
           <li><strong>Your Name</strong>, Co-author Name. "Paper Title." <em>Journal/Conference Name</em>, 2024.</li>
@@ -87,28 +160,9 @@
 
     <div class="divider"></div>
 
-    <!-- SKILLS -->
-    <div class="cv-section">
-      <h2>Skills</h2>
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <h3>Programming</h3>
-        </div>
-        <p class="cv-subtitle">Python, R, SQL, [others]</p>
-      </div>
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <h3>Tools & Frameworks</h3>
-        </div>
-        <p class="cv-subtitle">[Tool 1], [Tool 2], [Tool 3]</p>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
     <!-- AWARDS -->
     <div class="cv-section">
-      <h2>Awards & Fellowships</h2>
+      <h2><span class="highlight-cyan">Awards & Fellowships</span></h2>
       <div class="cv-entry">
         <ul>
           <li>[Fellowship or Award Name] — [Institution], 2023</li>
