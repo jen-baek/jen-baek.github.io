@@ -1,2 +1,2 @@
-# jen-baek.github.io
+# jen-baek-site.github.io
 Personal website
